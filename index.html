@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ធៀបអញ្ជើញ - អាពាហ៍ពិពាហ៍ ពៅ & ចិត្រា</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Koulen&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Hanuman', serif;
+            background-color: #fdfaf6;
+        }
+        .font-koulen {
+            font-family: 'Koulen', cursive;
+        }
+        .font-great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+        .hero-section {
+            background-image: url('photo/1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            font-family: 'Koulen', cursive;
+            color: #8c6b4f;
+            letter-spacing: 1px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 160, 120, 0.3);
+        }
+        .btn-primary {
+            background-color: #c7a17a;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #b38e6a;
+        }
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.appeared {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gallery-image {
+            transition: transform 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="song/Pre-weding.mp3" type="audio/mpeg">
+        <!-- អ្នកអាចដាក់ Link ចម្រៀងរបស់អ្នកនៅត្រង់ src="" -->
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-toggle" class="fixed bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg border border-gray-200">
+        <svg id="music-on-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8c6b4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <svg id="music-off-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8c6b4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+    </button>
+
+
+    <!-- Hero Section -->
+    <header class="hero-section h-screen flex flex-col items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 text-center p-4 fade-in appeared">
+            <p class="text-2xl md:text-3xl mb-4 font-koulen tracking-wider">សូមគោរពអញ្ជើញចូលរួមក្នុងពិធីមង្គលការរបស់យើង</p>
+            <h1 class="font-great-vibes text-6xl md:text-9xl mb-2">Pov & Chetra</h1>
+            <p class="text-lg md:text-2xl font-light">យើងនឹងរៀបអាពាហ៍ពិពាហ៍!</p>
+            <div class="border-t-2 border-white w-24 mx-auto my-6"></div>
+            <p class="text-xl md:text-2xl font-koulen tracking-wide">ថ្ងៃអាទិត្យទី១ ខែមីនា ឆ្នាំ២០២៦</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <!-- Couple Section -->
+        <section class="text-center mb-16 md:mb-24 fade-in">
+            <h2 class="section-title text-4xl md:text-5xl mb-4">កូនកំលោះ និង កូនក្រមុំ</h2>
+            <p class="max-w-2xl mx-auto mb-10">ដោយសេចក្តីគោរពស្រលាញ់ដ៏ជ្រាលជ្រៅ និងការយល់ចិត្តគ្នា យើងបានសម្រេចចិត្តរួមរស់ជាមួយគ្នាជាស្វាមីភរិយា។</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
+                <!-- Groom -->
+                <div class="text-center">
+                    <img src="photo/P1.png" alt="កូនកំលោះ" class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto border-4 border-[#e8d5c4] shadow-lg mb-4">
+                    <h3 class="font-great-vibes text-4xl text-[#a37e5e]">ហេង​ ពៅ</h3>
+                    <p class="mt-2">កូនប្រុសរបស់លោក [ពុធ ដានី] និង អ្នកស្រី [ទូច សុខគង់]</p>
+                </div>
+                <!-- Bride -->
+                <div class="text-center">
+                     <img src="photo/P2.png" alt="កូនក្រមុំ" class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto border-4 border-[#e8d5c4] shadow-lg mb-4">
+                    <h3 class="font-great-vibes text-4xl text-[#a37e5e]">យី ចិត្រា</h3>
+                    <p class="mt-2">កូនស្រីរបស់លោក [ពៅ] និង អ្នកស្រី [សៅរ៌]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="text-center mb-16 md:mb-24 fade-in">
+            <h2 class="section-title text-4xl md:text-5xl mb-8">ថ្ងៃពិសេសរបស់យើង</h2>
+            <div id="countdown" class="flex justify-center gap-3 md:gap-8 text-white">
+                <div class="bg-[#c7a17a] p-4 md:p-6 rounded-lg w-20 md:w-24 text-center shadow-lg">
+                    <div id="days" class="text-3xl md:text-4xl font-bold">0</div>
+                    <div class="text-sm font-koulen">ថ្ងៃ</div>
+                </div>
+                <div class="bg-[#c7a17a] p-4 md:p-6 rounded-lg w-20 md:w-24 text-center shadow-lg">
+                    <div id="hours" class="text-3xl md:text-4xl font-bold">0</div>
+                    <div class="text-sm font-koulen">ម៉ោង</div>
+                </div>
+                <div class="bg-[#c7a17a] p-4 md:p-6 rounded-lg w-20 md:w-24 text-center shadow-lg">
+                    <div id="minutes" class="text-3xl md:text-4xl font-bold">0</div>
+                    <div class="text-sm font-koulen">នាទី</div>
+                </div>
+                <div class="bg-[#c7a17a] p-4 md:p-6 rounded-lg w-20 md:w-24 text-center shadow-lg">
+                    <div id="seconds" class="text-3xl md:text-4xl font-bold">0</div>
+                    <div class="text-sm font-koulen">វិនាទី</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="mb-16 md:mb-24 fade-in">
+            <h2 class="section-title text-4xl md:text-5xl text-center mb-10">កម្មវិធីមង្គលការ</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ceremony -->
+                <div class="card p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="font-koulen text-3xl text-[#a37e5e] mb-4">ពិធីកាត់សក់</h3>
+                    <p class="mb-2 font-bold">ថ្ងៃអាទិត្យ​ ទី១ ខែមីនា ឆ្នាំ២០២៦</p>
+                    <p class="mb-4">ចាប់ពីម៉ោង ៨:០០ ព្រឹក តទៅ</p>
+                    <p class="mb-4">នៅគេហដ្ឋានខាងស្រី</p>
+                    <p class="mb-6">[អាសយដ្ឋាន, ភូមិបឹងរ៉ៃ, ឃុំក្រោលគោ, ស្រុកស្វាយជ្រុំ, ខេត្តស្វាយរៀង]</p>
+                    <a href="https://maps.app.goo.gl/GDHyK2ZUqfLHXQwJA" target="_blank" rel="noopener noreferrer" class="btn-primary font-koulen py-2 px-6 rounded-full inline-block">
+                        📍 មើលផែនទី
+                    </a>
+                </div>
+                <!-- Reception -->
+                <div class="card p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="font-koulen text-3xl text-[#a37e5e] mb-4">កម្មវិធីទទួលភ្ញៀវ</h3>
+                    <p class="mb-2 font-bold">ថ្ងៃអាទិត្យ​ ទី១ ខែមីនា ឆ្នាំ២០២៦</p>
+                    <p class="mb-4">ចាប់ពីម៉ោង ៥:០០ ល្ងាច តទៅ</p>
+                    <p class="mb-4">នៅគេហដ្ឋានខាងស្រី</p>
+                    <p class="mb-6">[អាសយដ្ឋានលម្អិត, ភូមិបឹងរ៉ៃ, ឃុំក្រោលគោ, ស្រុកស្វាយជ្រុំ, ខេត្តស្វាយរៀង]</p>
+                    <a href="https://maps.app.goo.gl/GDHyK2ZUqfLHXQwJA" target="_blank" rel="noopener noreferrer" class="btn-primary font-koulen py-2 px-6 rounded-full inline-block">
+                        📍 មើលផែនទី
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="section-title text-4xl md:text-5xl text-center mb-10 fade-in">រូបរបស់ពួកយើង</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-3 max-w-3xl mx-auto">
+                <img src="photo/2.png" class="gallery-image rounded-lg shadow-lg w-full h-full object-cover fade-in" style="animation-delay: 200ms;">
+                <img src="photo/3.png" class="gallery-image rounded-lg shadow-lg w-full h-full object-cover fade-in" style="animation-delay: 400ms;">
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section class="fade-in">
+            <h2 class="section-title text-4xl md:text-5xl text-center mb-10">💍ពាក្យជូនពរ❤️</h2>
+            <div class="max-w-2xl mx-auto card p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2">ឈ្មោះ</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c7a17a]" placeholder="សូមបំពេញឈ្មោះរបស់អ្នក">
+                </div>
+                <div class="mb-6">
+                    <label for="wish" class="block mb-2">ពាក្យជូនពរ</label>
+                    <textarea id="wish" name="wish" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c7a17a]" placeholder="សូមសរសេរពាក្យជូនពរ..."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="button" id="send-wish-btn" class="btn-primary font-koulen py-3 px-8 rounded-full text-lg">
+                        ផ្ញើសារ 💌
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center py-10 mt-12 bg-[#faf6f1]">
+        <h3 class="font-great-vibes text-5xl text-[#a37e5e]">Thank You</h3>
+        <p class="mt-4">សូមអរគុណទុកជាមុនសម្រាប់ការចូលរួម និងផ្តល់ជាកិត្តិយសក្នុងថ្ងៃពិសេសរបស់យើង។🙏🥰</p>
+        <p class="font-koulen mt-2 text-2xl text-[#8c6b4f]">Pov ❤️ Chetra</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("March 1, 2026 08:00:00").getTime();
+        const countdownElement = document.getElementById("countdown");
+
+        if (countdownElement) {
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").innerText = hours;
+                document.getElementById("minutes").innerText = minutes;
+                document.getElementById("seconds").innerText = seconds;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "<div class='text-center text-2xl font-koulen text-[#8c6b4f] w-full'>ពិធីមង្គលការបានចាប់ផ្តើម</div>";
+                }
+            }, 1000);
+        }
+
+        // Music Toggle
+        const musicToggle = document.getElementById('music-toggle');
+        const bgMusic = document.getElementById('bg-music');
+        const musicOnIcon = document.getElementById('music-on-icon');
+        const musicOffIcon = document.getElementById('music-off-icon');
+        let isPlaying = false;
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicOnIcon.classList.remove('hidden');
+                musicOffIcon.classList.add('hidden');
+            } else {
+                bgMusic.play().catch(error => {
+                    console.log("Autoplay was prevented. User interaction is needed.");
+                });
+                musicOnIcon.classList.add('hidden');
+                musicOffIcon.classList.remove('hidden');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Try to autoplay on first user interaction
+        document.body.addEventListener('click', () => {
+            if (!isPlaying && bgMusic.paused) {
+                 bgMusic.play().then(() => {
+                     isPlaying = true;
+                     musicOnIcon.classList.add('hidden');
+                     musicOffIcon.classList.remove('hidden');
+                 }).catch(e => console.log("Could not start music on click."));
+            }
+        }, { once: true });
+
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appeared');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Send Wish to Telegram
+        const sendWishBtn = document.getElementById('send-wish-btn');
+        sendWishBtn.addEventListener('click', () => {
+            const nameInput = document.getElementById('name');
+            const wishInput = document.getElementById('wish');
+            const name = nameInput.value.trim();
+            const wish = wishInput.value.trim();
+
+            if (!name || !wish) {
+                // You can add a subtle message here if you want
+                // For now, it just prevents sending an empty message
+                return;
+            }
+
+            // Construct the message
+            const message = `សូមអបអរសាទរដល់គូស្វាមីភរិយាថ្មី!🤵👰\n\nពី៖ ${name}\n\n"${wish}"`;
+
+            // Construct the Telegram URL to open a specific chat
+            const telegramUrl = `https://t.me/samnangkhiev?text=${encodeURIComponent(message)}`;
+
+            // Open the URL in a new tab
+            window.open(telegramUrl, '_blank');
+        });
+
+    </script>
+</body>
+</html>
+
